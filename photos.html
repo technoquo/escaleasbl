@@ -41,6 +41,7 @@
   </head>
 
   <body>
+    
     <!-- Topbar Start -->
     <div class="container-fluid bg-primary text-white d-none d-lg-flex">
       <div class="container py-3">
@@ -110,7 +111,18 @@
                           <nav>
                               <div class="theme-switch-wrapper">
                                   <label class="theme-switch" for="checkbox">
-                                      <input type="checkbox" id="checkbox" />
+                                       <!-- Spinner Start -->
+    <div
+    id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+  >
+    <div
+      class="spinner-border text-primary"
+      role="status"
+      style="width: 3rem; height: 3rem"
+    ></div>
+  </div>
+  <!-- Spinner End -->   <input type="checkbox" id="checkbox" />
                                       <div class="slider round"></div>
                                   </label>
                                   <img class="ico" id="light" src="img/modo-de-luz.png" alt="">
