@@ -59,9 +59,14 @@
     background-color: var(--defecto) !important;
 }
 
-.bg-nav-white {
+.bg-nav-white, .card  {
      background-color: var(--nav-menu);
 }
+
+p.card-text{
+   color: var(--item-menu);
+}
+
 .box {
     color: var(--box);
 }
@@ -85,6 +90,8 @@ h2, .download {
 svg {
     stroke: var(--item-menu);  
 }
+
+
 
 .contenedor {
     width: min(95%, 120rem);

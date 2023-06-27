@@ -109,4 +109,6 @@
     }
   }
   toggleSwitch.addEventListener("change", switchTheme, false);
+
+  /// Menu
 })(jQuery);
