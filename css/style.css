@@ -98,6 +98,10 @@ svg {
     margin: 0 auto;
 }
 
+.fa-map-marker-alt {
+    cursor: pointer;
+}
+
 /** Galería **/
 ul.galeria-imagenes {
     list-style-type: none;
@@ -585,6 +589,22 @@ input:checked+.slider:before {
 .navbar-light .navbar-toggler{
     border-color: #fff;
 }
+
+
+.share-social a {
+    font-size: 2rem;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.share-social .facebook-icon {
+    color: #3b5998;
+}
+
+.share-social .instagram-icon {
+    color: #C13584;
+}
+
 
 /****  FIN PERSONALIZADO ****/
 body{

@@ -110,5 +110,54 @@
   }
   toggleSwitch.addEventListener("change", switchTheme, false);
 
-  /// Menu
+  let map = document.querySelector("#line-map");
+
+  map.addEventListener("click", function () {
+    var latitude = "50.851603";
+    var longitude = "4.392314";
+
+    var googleMapsUrl =
+      "https://www.google.com/maps?q=" + latitude + "," + longitude;
+    window.open(googleMapsUrl, "_blank");
+  });
 })(jQuery);
+
+function shareOnFacebook() {
+  // Replace the URL with your own value
+  var url = "https://example.com";
+
+  // Create the Facebook share URL
+  var shareUrl =
+    "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url);
+
+  // Open the share URL in a new window or tab
+  window.open(shareUrl);
+}
+
+function shareOnInstagram() {
+  // Replace the URL with your own value
+  var url =
+    "https://www.nacion.com/el-pais/politica/liberal-progresista-plantea-mocion-de-censura/SYXS23Z5URDS3LNREFIOB3HYFQ/story/";
+
+  // Create the Instagram share URL
+  var shareUrl =
+    "https://www.instagram.com/sharer.php?u=" + encodeURIComponent(url);
+
+  // Open the share URL in a new window or tab
+  window.open(shareUrl);
+}
+
+function shareOnWhatsApp() {
+  // Replace the URL and text with your own values
+  var url = window.location.href;
+  alert(url);
+  var text = "Découvrez ce site Web génial!";
+
+  // Create the WhatsApp share URL
+  var shareUrl =
+    "https://api.whatsapp.com/send?text=" +
+    encodeURIComponent(text + " " + url);
+
+  // Open the share URL in a new window or tab
+  window.open(shareUrl);
+}
