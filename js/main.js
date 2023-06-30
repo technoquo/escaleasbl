@@ -150,7 +150,7 @@ function shareOnInstagram() {
 function shareOnWhatsApp() {
   // Replace the URL and text with your own values
   var url = window.location.href;
-  alert(url);
+
   var text = "Découvrez ce site Web génial!";
 
   // Create the WhatsApp share URL
