@@ -122,6 +122,54 @@
   });
 })(jQuery);
 
+let mouseX;
+let mouseY;
+$(document).mousemove(function (e) {
+  mouseX = e.pageX;
+  mouseY = e.pageY;
+});
+$(".escale")
+  .mouseover(function () {
+    const scroll = window.scrollY;
+    if (scroll < 300) {
+      showVideo($(this));
+      $("#tooltip").stop(false, true).fadeIn(1);
+      $(this).mousemove(function () {
+        $("#tooltip").css({
+          top: mouseY - 350,
+          left: mouseX - 200,
+        });
+      });
+    }
+  })
+  .mouseout(function () {
+    $("#tooltip").stop(false, true).fadeOut("slow");
+  });
+
+function showVideo(e) {
+  if (e.hasClass("actualit")) {
+    $("#tooltip").html(
+      '<img SRC="https://www.cnse.es/lseaula/gif/juegos_linguis/6-8vocabulario.gif">'
+    );
+  } else if (e.hasClass("accompagnement")) {
+    $("#tooltip").html(
+      '<img SRC="https://www.cnse.es/lseaula/gif/juegos_linguis/6-8juegos.gif">'
+    );
+  } else if (e.hasClass("photos")) {
+    $("#tooltip").html(
+      '<img SRC="https://www.cnse.es/lseaula/gif/identidad/6-8identidad.gif">'
+    );
+  } else if (e.hasClass("historique")) {
+    $("#tooltip").html(
+      '<img SRC="https://www.cnse.es/lseaula/gif/cuentos6-8/6-8cuentos.gif">'
+    );
+  } else if (e.hasClass("evenements")) {
+    $("#tooltip").html(
+      '<img SRC="https://www.cnse.es/lseaula/gif/profesionales/6-8profesionales.gif">'
+    );
+  }
+}
+
 function shareOnFacebook() {
   // Replace the URL with your own value
   var url = "https://example.com";

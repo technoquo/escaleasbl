@@ -132,6 +132,13 @@ ul.galeria-imagenes {
         
     }
 }
+
+
+#tooltip {
+    width: 200px;
+    position: absolute;
+   
+}
 /*
 
 /*
